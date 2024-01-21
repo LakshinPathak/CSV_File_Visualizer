@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Choose the desired font family */
+        }
+
+        h1, h5 {
+            color: #333; /* Set the desired text color */
+        }
+
+        .container-fluid {
+            margin: 20px; /* Adjust the margin as needed */
+        }
+
+        /* Add margin to specific sections if needed */
+        .dashboard-container {
+            margin-bottom: 20px; /* Adjust the margin as needed */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header text-center">
+            <h1 class="mt-5">CSV File Visualizer</h1>
+        </div>
+        <div class="dashboard-container mt-5">
+            <div class="form-group">
+                <label for="csvFile">Select a CSV file:</label>
+                <input type="file" class="form-control-file" id="csvFile" accept=".csv">
+            </div>
+            <button id="uploadButton" class="btn btn-primary mt-3">Upload CSV</button>
+        </div>
+
+  
+
+
+        <div class="dashboard-container mt-5">
+            <div class="form-group">
+                <label for="fieldToVisualize">Select a field to visualize in Bar Graph:</label>
+                <select class="form-control" id="fieldToVisualize">
+                    <!-- Options will be added dynamically using JavaScript -->
+                </select>
+            </div>
+            <div class="chart-container">
+                <div id="chart"></div>
+            </div>
+        </div>
+
+              <!--  for pie chart -->
+      
+        
+
+
+        <div class="dashboard-container mt-5">
+            <div class="form-group">
+                <label for="fieldToVisualize">Select a field to visualize in Pie Chart:</label>
+                <select class="form-control" id="fieldToVisualizepie">
+                    <!-- Options will be added dynamically using JavaScript -->
+                </select>
+            </div>
+            <div class="chart-container">
+                <div id="chart_pie"></div>
+            </div>
+        </div>
+
+
+
+
+    <!--  for Histogram -->
+      
+        
+
+
+    <div class="dashboard-container mt-5">
+        <div class="form-group">
+            <label for="fieldToVisualize">Select a field to visualize in Histogram:</label>
+            <select class="form-control" id="fieldToVisualizehist">
+                <!-- Options will be added dynamically using JavaScript -->
+            </select>
+        </div>
+        <div class="chart-container">
+            <div id="chart_hist"></div>
+        </div>
+    </div>
+
+
+
+
+
+<!--
+
+         <div class="dashboard-container mt-5">
+            <h5 class="text-center">Execute MongoDB Query</h5>
+            <div class="form-group">
+                <input type="text" class="form-control" id="sqlQuery" placeholder="Enter MongoDB Query">
+            </div>
+            <button id="executeQueryButton" class="btn btn-primary mt-3">Execute Query</button>
+            <div class="query-results mt-3">
+                <h5>Query Results</h5>
+                <pre id="queryResultText"></pre>
+            </div>
+        </div> 
+
+-->
+
+        <div class="dashboard-container mt-5">
+            <h5 class="text-center">Enter Column Name:</h5>
+            <div class="form-group">
+                <input type="text" class="form-control" id="querycol" placeholder="Enter Column Name">
+            </div>
+        </div>   
+
+
+        <div class="dashboard-container mt-5">
+            <h5 class="text-center">Enter value to groupBy:</h5>
+            <div class="form-group">
+                <input type="text" class="form-control" id="queryval" placeholder="Enter value">
+            </div>
+        </div>   
+    
+
+
+        <button id="executeQueryButton2" class="btn btn-primary mt-3">Execute Query</button>
+            <div class="query-results mt-3">
+                <h5>Query Result:</h5>
+                <pre id="queryResultText2"></pre>
+            </div>
+
+
+
+
+
+
+        <div class="dashboard-container mt-5 p-3">
+            <h5>Select a Field:</h5>
+            <div class="form-group">
+                <select class="form-control" id="queryOption">
+                 </select>
+            </div>
+        </div> 
+        
+
+        <div class="query-results mt-3">
+            <h5>Results: </h5>
+            <pre id="queryResultTextsecond"></pre>
+        </div>
+
+
+        
+
+    </div>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.14.2/math.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
